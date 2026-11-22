@@ -25,3 +25,69 @@ html,body{
 
 
 
+
+
+.nav-bar {
+  position: fixed;
+  top: 2%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-bar img{
+  width: 5%;
+  margin-left: 5%;
+  background-color: black;
+}
+ 
+
+
+
+
+.nav-bar p{
+  margin-right:5%;
+  padding: 5px 8px;
+  background-color:  #ececec; 
+  font-family: 'Times New Roman', Times, serif;
+}
+ 
+.nav-bar p:hover{
+  color: #f3008f;
+cursor: pointer;
+ text-decoration: underline;
+}
+
+
+
+#settings{
+  margin-right:5%;
+  padding: 5px 8px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  text-decoration: none;
+    background-color:  #ececec; 
+}
+ 
+#settings:hover{
+  color: #f3008f;
+cursor: pointer;
+ text-decoration: underline;
+}
+
+
+#main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ transform: translate(-50%, -50%);
+  width: 35%;
+
+}
+
+
+
+
+
