@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
 
 @view-transition {
   navigation: auto;
@@ -16,15 +19,179 @@ html,body{
 
 
 ::selection {
-  background: #ff008c;
+  background: #f3008f;
+  color: white;
 }
 
 
-#b1{
-    width: 100%;
+
+
+.trail-img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 140px;            /* change size here */
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+  animation: trail 0.9s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+
+@keyframes trail {
+  from {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(1) rotate(var(--r));
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(0.4) rotate(var(--r));
+  }
 }
 
 
-#b2{
-    width: 100%;
+
+
+
+
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;          
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+  padding: 25px 16px 40px;    
+  box-sizing: border-box;
+}
+
+.content {
+  width: min(90%, 500px);
+  text-align: center;
+}
+
+#com {
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+
+#des{
+font-family: 'Times New Roman', Times, serif;
+font-size: 17px;
+}
+
+
+
+
+
+#register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+
+#register-form label {
+   font-size: 20px; 
+   font-family: 'Times New Roman', Times, serif;
+margin-top: 20px;
+  }
+
+
+
+
+#register-form input,
+#register-form select
+{
+  background: #ececec;
+  border: none;
+  padding: 5px 8px;
+  min-width: 150px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+#register-form button{
+  margin-top:5%;
+  padding: 5px 8px;
+  min-width: 150px;
+  border: none;
+  background-color: white;
+font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: black;
+  text-decoration: underline;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+#register-form button:hover{
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  color:#f3008f;
+}
+
+
+
+
+
+.legal{
+  margin-top:5%;
+  font-size: 13px;
+  font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    opacity: 0.7;
+}
+
+
+
+#sleep{
+  margin-top:-10%;
+  width: 63%;
+  max-width: 100%;
+  height: auto;
+  rotate: -25deg;
+   scale: 1;
+  transition: scale 0.4s ease-in-out;
+}
+
+#sleep:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+
+
+#popup {
+  position: fixed;
+  top: 55%;
+  left: 42%;
+  max-width: 80vw;
+  max-height: 80vh;
+  opacity: 0;
+  scale: 0.3;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    scale 0.3s ease,
+    visibility 0s linear 0.3s;  
+}
+
+#popup.show {
+  opacity: 1;
+  scale: 0.3;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition:
+    opacity 0.3s ease,
+    scale 0.3s ease,
+    visibility 0s;             
 }

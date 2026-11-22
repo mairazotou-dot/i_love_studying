@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
+
+@view-transition {
+  navigation: auto;
+}
+
+
+html,body{
+  width: 100%;
+    min-height: 100%;
+    margin: 0;
+  background-color:white;
+  scroll-behavior: smooth;
+     overflow-x: hidden;
+
+}
+
+
+::selection {
+  background: #f3008f;
+  color: white;
+}
+
+
+
