@@ -30,7 +30,7 @@ html,body{
   position: fixed;
   left: 0;
   top: 0;
-  width: 140px;            /* change size here */
+  width: 140px;           
   height: auto;
   pointer-events: none;
   user-select: none;
