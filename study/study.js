@@ -152,3 +152,17 @@ document.querySelectorAll('#numbers a').forEach(link => {
   link.addEventListener('mousemove', move);
   link.addEventListener('mouseleave', () => floatImg.classList.remove('is-visible'));
 });
+
+
+
+
+//menu
+const menuBtn = document.getElementById('menu');
+  const panel   = document.getElementById('menuPanel');
+  const xBtn    = document.getElementById('menuX');
+
+  menuBtn.addEventListener('click', () => panel.classList.add('is-open'));
+  xBtn.addEventListener('click', () => panel.classList.remove('is-open'));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') panel.classList.remove('is-open');
+  });
