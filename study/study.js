@@ -130,3 +130,25 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.pixel-wrap') || e.target.closest('.rabbit')) return;
   hide();
 });
+
+
+
+
+
+// number hover: image follows the cursor
+document.querySelectorAll('#numbers a').forEach(link => {
+  const floatImg = document.getElementById(link.dataset.target);
+  if (!floatImg) { console.warn('missing image for', link.dataset.target); return; }
+
+  const move = (e) => {
+  floatImg.style.transform =
+    `translate(${e.clientX}px, ${e.clientY - 20}px) translate(-50%, -100%)`;
+};
+
+  link.addEventListener('mouseenter', (e) => {
+    move(e);                                  // place it right away
+    floatImg.classList.add('is-visible');
+  });
+  link.addEventListener('mousemove', move);
+  link.addEventListener('mouseleave', () => floatImg.classList.remove('is-visible'));
+});
