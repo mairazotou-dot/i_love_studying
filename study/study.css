@@ -366,11 +366,12 @@ position: absolute;
 
 .item:hover img { transform: scale(1.6); }
 
-/* direct neighbours */
+
 .item:hover + .item img,
 .item:has(+ .item:hover) img { transform: scale(1.2); }
 
-/* neighbours' neighbours */
+
+
 .item:hover + .item + .item img,
 .item:has(+ .item + .item:hover) img { transform: scale(1); }
 
@@ -462,5 +463,13 @@ left: 2.5rem;
   width: 30%;
   filter: invert(1);
 }
+
+
+
+
+
+
+
+
 
 
